@@ -1,4 +1,7 @@
 # tests/test_app.py
+import sys
+sys.path.insert(0, '../')
+
 from app import app
 
 def test_hello():
