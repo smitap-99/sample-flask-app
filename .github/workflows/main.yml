@@ -39,8 +39,8 @@ jobs:
     - name: Build and Publish Docker Image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: smitap99/${{ github.repository_name }}
-        tags: latest
+        image: smitap99/sample_flask_app
+        addLatest: Yes
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
