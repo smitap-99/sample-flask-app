@@ -37,7 +37,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build and Publish Docker Image
-    - uses: mr-smithers-excellent/docker-build-push@v6
+      uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: smitap99/${{ github.repository_name }}
         tags: latest
