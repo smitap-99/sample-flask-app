@@ -41,7 +41,7 @@ jobs:
       with:
         image: smitap99/${{ github.repository_name }}
         tags: latest
-        registry: registry-url.io
+        registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
