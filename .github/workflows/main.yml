@@ -56,9 +56,9 @@ jobs:
         docker build -t ${{ secrets.ACR_REGISTRY_URL }}/sampleflaskapp:latest .
         docker push ${{ secrets.ACR_REGISTRY_URL }}/sampleflaskapp:latest        
 
-    # - name: Deploy to Azure Container Instances
-    #   run: |
-    #     az container create --resource-group YourResourceGroup --name ${{ github.repository }} --image ${{ secrets.ACR_REGISTRY_URL }}/${{ github.repository }}:latest --registry-username ${{ secrets.ACR_REGISTRY_USERNAME }} --registry-password ${{ secrets.ACR_REGISTRY_PASSWORD }}
+    - name: Deploy to Azure Container Instances
+      run: |
+        az container create --resource-group DFS-accelerator --name sampleflaskapp --image ${{ secrets.ACR_REGISTRY_URL }}/sampleflaskapp:latest --registry-username ${{ secrets.ACR_REGISTRY_USERNAME }} --registry-password ${{ secrets.ACR_REGISTRY_PASSWORD }}
 
 
 
